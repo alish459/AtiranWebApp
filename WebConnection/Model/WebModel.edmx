@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ZAhmadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cust_act">
+          <Key>
+            <PropertyRef Name="rdf_" />
+            <PropertyRef Name="shmo" />
+          </Key>
+          <Property Name="rdf_" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="shmo" Type="int" Nullable="false" />
+          <Property Name="date" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="act_bes" Type="money" Nullable="false" />
+          <Property Name="act_bed" Type="money" Nullable="false" />
+          <Property Name="act_bedbes" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="act_dis" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="act_id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="manafter" Type="money" Nullable="false" />
+          <Property Name="ghno" Type="bigint" Nullable="false" />
+          <Property Name="done_date" Type="char" MaxLength="10" />
+          <Property Name="t_time" Type="datetime" />
+          <Property Name="HAct_id" Type="int" />
+          <Property Name="ShowInReport" Type="bit" Nullable="false" />
+          <Property Name="DocNumber" Type="int" />
+          <Property Name="MoghayeratDiscription" Type="nvarchar" MaxLength="1500" />
+          <Property Name="sysid" Type="int" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="fk_id" Type="bigint" />
+          <Property Name="Rdf_ForDar" Type="int" />
+          <Property Name="GhestPriceTemp" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="AccDocNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="custgroup">
+          <Key>
+            <PropertyRef Name="group_rdf" />
+          </Key>
+          <Property Name="group_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="group_rdf" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stdate" Type="char" MaxLength="10" />
+          <Property Name="price" Type="int" />
+          <Property Name="ted_rooz" Type="int" />
+          <Property Name="AccType" Type="int" />
+          <Property Name="MoeinID" Type="bigint" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="PerGain" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="CUSTOMERS">
+          <Key>
+            <PropertyRef Name="SHMO" />
+          </Key>
+          <Property Name="SHMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MONAME" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="code" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="SHHES" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BANKNAME" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="bankshobe" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="addre" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="tell1" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="tell2" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="cell" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="active" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="cred" Type="money" Nullable="false" />
+          <Property Name="man" Type="money" Nullable="false" />
+          <Property Name="peygham1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="special" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="rdf_city" Type="int" />
+          <Property Name="rdf_region" Type="int" Nullable="false" />
+          <Property Name="group_rdf" Type="int" Nullable="false" />
+          <Property Name="date" Type="char" MaxLength="10" />
+          <Property Name="sh_i_m" Type="int" />
+          <Property Name="sharh" Type="nvarchar" MaxLength="2550" />
+          <Property Name="vis_rdf" Type="int" Nullable="false" />
+          <Property Name="user_d" Type="nvarchar" MaxLength="300" />
+          <Property Name="shomare_masir" Type="int" />
+          <Property Name="defi_vis" Type="int" />
+          <Property Name="hesab_status" Type="int" Nullable="false" />
+          <Property Name="maxopen_time" Type="char" MaxLength="10" />
+          <Property Name="check_eteb" Type="int" />
+          <Property Name="just_naghdi" Type="int" />
+          <Property Name="black_list" Type="int" />
+          <Property Name="result_m" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="c_egh" Type="nvarchar" MaxLength="100" />
+          <Property Name="c_mel" Type="nvarchar" MaxLength="100" />
+          <Property Name="c_pos" Type="nvarchar" MaxLength="100" />
+          <Property Name="kind" Type="int" />
+          <Property Name="IsEmp" Type="int" />
+          <Property Name="MaxManFactor" Type="int" />
+          <Property Name="RDF_masir" Type="int" />
+          <Property Name="Lat" Type="float" />
+          <Property Name="Lng" Type="float" />
+          <Property Name="TafsilCode" Type="nchar" MaxLength="13" />
+          <Property Name="Ecode_Vis" Type="int" />
+          <Property Name="PersonalityType" Type="int" />
+          <Property Name="EtehadieID" Type="int" />
+          <Property Name="Shenaseh_Egh" Type="nvarchar" MaxLength="100" />
+          <Property Name="TafsilID" Type="bigint" />
+          <Property Name="Username" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="500" />
+          <Property Name="PriceCheck" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CheckDateDay" Type="int" />
+          <Property Name="ShmoMoaref" Type="int" />
+        </EntityType>
+        <Association Name="FK_cust_act_CUSTOMERS">
+          <End Role="CUSTOMERS" Type="Self.CUSTOMERS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="cust_act" Type="Self.cust_act" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="SHMO" />
+            </Principal>
+            <Dependent Role="cust_act">
+              <PropertyRef Name="shmo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_custgroup_custgroup">
+          <End Role="custgroup" Type="Self.custgroup" Multiplicity="1" />
+          <End Role="custgroup1" Type="Self.custgroup" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="custgroup">
+              <PropertyRef Name="group_rdf" />
+            </Principal>
+            <Dependent Role="custgroup1">
+              <PropertyRef Name="group_rdf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUSTOMERS_custgroup">
+          <End Role="custgroup" Type="Self.custgroup" Multiplicity="1" />
+          <End Role="CUSTOMERS" Type="Self.CUSTOMERS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="custgroup">
+              <PropertyRef Name="group_rdf" />
+            </Principal>
+            <Dependent Role="CUSTOMERS">
+              <PropertyRef Name="group_rdf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ZAhmadModelStoreContainer">
+          <EntitySet Name="cust_act" EntityType="Self.cust_act" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="custgroup" EntityType="Self.custgroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CUSTOMERS" EntityType="Self.CUSTOMERS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_cust_act_CUSTOMERS" Association="Self.FK_cust_act_CUSTOMERS">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+            <End Role="cust_act" EntitySet="cust_act" />
+          </AssociationSet>
+          <AssociationSet Name="FK_custgroup_custgroup" Association="Self.FK_custgroup_custgroup">
+            <End Role="custgroup" EntitySet="custgroup" />
+            <End Role="custgroup1" EntitySet="custgroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUSTOMERS_custgroup" Association="Self.FK_CUSTOMERS_custgroup">
+            <End Role="custgroup" EntitySet="custgroup" />
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZAhmadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cust_act">
+          <Key>
+            <PropertyRef Name="rdf_" />
+            <PropertyRef Name="shmo" />
+          </Key>
+          <Property Name="rdf_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="shmo" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="act_bes" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="act_bed" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="act_bedbes" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="act_dis" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="act_id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="manafter" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="ghno" Type="Int64" Nullable="false" />
+          <Property Name="done_date" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="t_time" Type="DateTime" Precision="3" />
+          <Property Name="HAct_id" Type="Int32" />
+          <Property Name="ShowInReport" Type="Boolean" Nullable="false" />
+          <Property Name="DocNumber" Type="Int32" />
+          <Property Name="MoghayeratDiscription" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <Property Name="sysid" Type="Int32" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="fk_id" Type="Int64" />
+          <Property Name="Rdf_ForDar" Type="Int32" />
+          <Property Name="GhestPriceTemp" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="AccDocNumber" Type="Int32" />
+          <NavigationProperty Name="CUSTOMERS" Relationship="Self.FK_cust_act_CUSTOMERS" FromRole="cust_act" ToRole="CUSTOMERS" />
+        </EntityType>
+        <EntityType Name="custgroup">
+          <Key>
+            <PropertyRef Name="group_rdf" />
+          </Key>
+          <Property Name="group_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="group_rdf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stdate" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="price" Type="Int32" />
+          <Property Name="ted_rooz" Type="Int32" />
+          <Property Name="AccType" Type="Int32" />
+          <Property Name="MoeinID" Type="Int64" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="PerGain" Type="Decimal" Precision="18" Scale="2" />
+          <NavigationProperty Name="custgroup1" Relationship="Self.FK_custgroup_custgroup" FromRole="custgroup" ToRole="custgroup1" />
+          <NavigationProperty Name="custgroup2" Relationship="Self.FK_custgroup_custgroup" FromRole="custgroup1" ToRole="custgroup" />
+          <NavigationProperty Name="CUSTOMERS" Relationship="Self.FK_CUSTOMERS_custgroup" FromRole="custgroup" ToRole="CUSTOMERS" />
+        </EntityType>
+        <EntityType Name="CUSTOMERS">
+          <Key>
+            <PropertyRef Name="SHMO" />
+          </Key>
+          <Property Name="SHMO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MONAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="code" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SHHES" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BANKNAME" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bankshobe" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="addre" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tell1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tell2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cell" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="active" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="cred" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="man" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="peygham1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="special" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="rdf_city" Type="Int32" />
+          <Property Name="rdf_region" Type="Int32" Nullable="false" />
+          <Property Name="group_rdf" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="sh_i_m" Type="Int32" />
+          <Property Name="sharh" Type="String" MaxLength="2550" FixedLength="false" Unicode="true" />
+          <Property Name="vis_rdf" Type="Int32" Nullable="false" />
+          <Property Name="user_d" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="shomare_masir" Type="Int32" />
+          <Property Name="defi_vis" Type="Int32" />
+          <Property Name="hesab_status" Type="Int32" Nullable="false" />
+          <Property Name="maxopen_time" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="check_eteb" Type="Int32" />
+          <Property Name="just_naghdi" Type="Int32" />
+          <Property Name="black_list" Type="Int32" />
+          <Property Name="result_m" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="c_egh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="c_mel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="c_pos" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="kind" Type="Int32" />
+          <Property Name="IsEmp" Type="Int32" />
+          <Property Name="MaxManFactor" Type="Int32" />
+          <Property Name="RDF_masir" Type="Int32" />
+          <Property Name="Lat" Type="Double" />
+          <Property Name="Lng" Type="Double" />
+          <Property Name="TafsilCode" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+          <Property Name="Ecode_Vis" Type="Int32" />
+          <Property Name="PersonalityType" Type="Int32" />
+          <Property Name="EtehadieID" Type="Int32" />
+          <Property Name="Shenaseh_Egh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TafsilID" Type="Int64" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PriceCheck" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CheckDateDay" Type="Int32" />
+          <Property Name="ShmoMoaref" Type="Int32" />
+          <NavigationProperty Name="cust_act" Relationship="Self.FK_cust_act_CUSTOMERS" FromRole="CUSTOMERS" ToRole="cust_act" />
+          <NavigationProperty Name="custgroup" Relationship="Self.FK_CUSTOMERS_custgroup" FromRole="CUSTOMERS" ToRole="custgroup" />
+        </EntityType>
+        <Association Name="FK_cust_act_CUSTOMERS">
+          <End Role="CUSTOMERS" Type="Self.CUSTOMERS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="cust_act" Type="Self.cust_act" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="SHMO" />
+            </Principal>
+            <Dependent Role="cust_act">
+              <PropertyRef Name="shmo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_custgroup_custgroup">
+          <End Role="custgroup" Type="Self.custgroup" Multiplicity="1" />
+          <End Role="custgroup1" Type="Self.custgroup" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="custgroup">
+              <PropertyRef Name="group_rdf" />
+            </Principal>
+            <Dependent Role="custgroup1">
+              <PropertyRef Name="group_rdf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CUSTOMERS_custgroup">
+          <End Role="custgroup" Type="Self.custgroup" Multiplicity="1" />
+          <End Role="CUSTOMERS" Type="Self.CUSTOMERS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="custgroup">
+              <PropertyRef Name="group_rdf" />
+            </Principal>
+            <Dependent Role="CUSTOMERS">
+              <PropertyRef Name="group_rdf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cust_act" EntityType="Self.cust_act" />
+          <EntitySet Name="custgroup" EntityType="Self.custgroup" />
+          <EntitySet Name="CUSTOMERS" EntityType="Self.CUSTOMERS" />
+          <AssociationSet Name="FK_cust_act_CUSTOMERS" Association="Self.FK_cust_act_CUSTOMERS">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+            <End Role="cust_act" EntitySet="cust_act" />
+          </AssociationSet>
+          <AssociationSet Name="FK_custgroup_custgroup" Association="Self.FK_custgroup_custgroup">
+            <End Role="custgroup" EntitySet="custgroup" />
+            <End Role="custgroup1" EntitySet="custgroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CUSTOMERS_custgroup" Association="Self.FK_CUSTOMERS_custgroup">
+            <End Role="custgroup" EntitySet="custgroup" />
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZAhmadModelStoreContainer" CdmEntityContainer="WebEntities">
+          <EntitySetMapping Name="cust_act">
+            <EntityTypeMapping TypeName="ZAhmadModel.cust_act">
+              <MappingFragment StoreEntitySet="cust_act">
+                <ScalarProperty Name="rdf_" ColumnName="rdf_" />
+                <ScalarProperty Name="shmo" ColumnName="shmo" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="act_bes" ColumnName="act_bes" />
+                <ScalarProperty Name="act_bed" ColumnName="act_bed" />
+                <ScalarProperty Name="act_bedbes" ColumnName="act_bedbes" />
+                <ScalarProperty Name="act_dis" ColumnName="act_dis" />
+                <ScalarProperty Name="act_id" ColumnName="act_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="manafter" ColumnName="manafter" />
+                <ScalarProperty Name="ghno" ColumnName="ghno" />
+                <ScalarProperty Name="done_date" ColumnName="done_date" />
+                <ScalarProperty Name="t_time" ColumnName="t_time" />
+                <ScalarProperty Name="HAct_id" ColumnName="HAct_id" />
+                <ScalarProperty Name="ShowInReport" ColumnName="ShowInReport" />
+                <ScalarProperty Name="DocNumber" ColumnName="DocNumber" />
+                <ScalarProperty Name="MoghayeratDiscription" ColumnName="MoghayeratDiscription" />
+                <ScalarProperty Name="sysid" ColumnName="sysid" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="fk_id" ColumnName="fk_id" />
+                <ScalarProperty Name="Rdf_ForDar" ColumnName="Rdf_ForDar" />
+                <ScalarProperty Name="GhestPriceTemp" ColumnName="GhestPriceTemp" />
+                <ScalarProperty Name="AccDocNumber" ColumnName="AccDocNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="custgroup">
+            <EntityTypeMapping TypeName="ZAhmadModel.custgroup">
+              <MappingFragment StoreEntitySet="custgroup">
+                <ScalarProperty Name="group_name" ColumnName="group_name" />
+                <ScalarProperty Name="group_rdf" ColumnName="group_rdf" />
+                <ScalarProperty Name="stdate" ColumnName="stdate" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="ted_rooz" ColumnName="ted_rooz" />
+                <ScalarProperty Name="AccType" ColumnName="AccType" />
+                <ScalarProperty Name="MoeinID" ColumnName="MoeinID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="PerGain" ColumnName="PerGain" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMERS">
+            <EntityTypeMapping TypeName="ZAhmadModel.CUSTOMERS">
+              <MappingFragment StoreEntitySet="CUSTOMERS">
+                <ScalarProperty Name="SHMO" ColumnName="SHMO" />
+                <ScalarProperty Name="MONAME" ColumnName="MONAME" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="SHHES" ColumnName="SHHES" />
+                <ScalarProperty Name="BANKNAME" ColumnName="BANKNAME" />
+                <ScalarProperty Name="bankshobe" ColumnName="bankshobe" />
+                <ScalarProperty Name="addre" ColumnName="addre" />
+                <ScalarProperty Name="tell1" ColumnName="tell1" />
+                <ScalarProperty Name="tell2" ColumnName="tell2" />
+                <ScalarProperty Name="cell" ColumnName="cell" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="cred" ColumnName="cred" />
+                <ScalarProperty Name="man" ColumnName="man" />
+                <ScalarProperty Name="peygham1" ColumnName="peygham1" />
+                <ScalarProperty Name="special" ColumnName="special" />
+                <ScalarProperty Name="rdf_city" ColumnName="rdf_city" />
+                <ScalarProperty Name="rdf_region" ColumnName="rdf_region" />
+                <ScalarProperty Name="group_rdf" ColumnName="group_rdf" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="sh_i_m" ColumnName="sh_i_m" />
+                <ScalarProperty Name="sharh" ColumnName="sharh" />
+                <ScalarProperty Name="vis_rdf" ColumnName="vis_rdf" />
+                <ScalarProperty Name="user_d" ColumnName="user_d" />
+                <ScalarProperty Name="shomare_masir" ColumnName="shomare_masir" />
+                <ScalarProperty Name="defi_vis" ColumnName="defi_vis" />
+                <ScalarProperty Name="hesab_status" ColumnName="hesab_status" />
+                <ScalarProperty Name="maxopen_time" ColumnName="maxopen_time" />
+                <ScalarProperty Name="check_eteb" ColumnName="check_eteb" />
+                <ScalarProperty Name="just_naghdi" ColumnName="just_naghdi" />
+                <ScalarProperty Name="black_list" ColumnName="black_list" />
+                <ScalarProperty Name="result_m" ColumnName="result_m" />
+                <ScalarProperty Name="c_egh" ColumnName="c_egh" />
+                <ScalarProperty Name="c_mel" ColumnName="c_mel" />
+                <ScalarProperty Name="c_pos" ColumnName="c_pos" />
+                <ScalarProperty Name="kind" ColumnName="kind" />
+                <ScalarProperty Name="IsEmp" ColumnName="IsEmp" />
+                <ScalarProperty Name="MaxManFactor" ColumnName="MaxManFactor" />
+                <ScalarProperty Name="RDF_masir" ColumnName="RDF_masir" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Lng" ColumnName="Lng" />
+                <ScalarProperty Name="TafsilCode" ColumnName="TafsilCode" />
+                <ScalarProperty Name="Ecode_Vis" ColumnName="Ecode_Vis" />
+                <ScalarProperty Name="PersonalityType" ColumnName="PersonalityType" />
+                <ScalarProperty Name="EtehadieID" ColumnName="EtehadieID" />
+                <ScalarProperty Name="Shenaseh_Egh" ColumnName="Shenaseh_Egh" />
+                <ScalarProperty Name="TafsilID" ColumnName="TafsilID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PriceCheck" ColumnName="PriceCheck" />
+                <ScalarProperty Name="CheckDateDay" ColumnName="CheckDateDay" />
+                <ScalarProperty Name="ShmoMoaref" ColumnName="ShmoMoaref" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

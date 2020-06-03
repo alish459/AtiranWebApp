@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebConnection.Services.CustomerService>
+@{
+	ViewBag.Title = ViewBag.Message;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="table-responsive">
+	<table class="table table-dark">
+		<tbody class="sticky-top">
+			<tr>
+				<th>تاريخ</th>
+				<th>كاربر</th>
+				<th>شرح</th>
+				<th>بدهكار</th>
+				<th>بستانكار</th>
+				<th>مانده</th>
+				<th width="40px">تشخيص</th>
+			</tr>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td style="text-align:center">@item.Date</td>
+					<td style="text-align:center">@item.UserName</td>
+					<td style="text-align:center">@item.Explain</td>
+					<td style="text-align:center">@item.Bed.ToString("#,0")</td>
+					<td style="text-align:center">@item.Bes.ToString("#,0")</td>
+					<td style="text-align:center">@item.BedSubBes.ToString("#,0")</td>
+					<td>@item.Status</td>
+				</tr>
+			}
+		</tbody>
+
+	</table>
+</div>

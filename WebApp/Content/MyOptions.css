@@ -1,0 +1,49 @@
+﻿* {
+	direction: rtl;
+	text-align: right;
+	font-family: 'IRANSans(FaNum)' !important	;
+	font-size: 11pt;
+}
+
+th {
+	text-align: center;
+	background-color: teal;
+}
+
+.navbar-nav {
+	display: table;
+	width: 25%;
+	margin: 0;
+}
+
+	.navbar-nav > li {
+		float: none;
+		display: table-cell;
+		text-align: center;
+	}
+
+nav a {
+	color: wheat;
+}
+
+nav {
+	background-color: darkblue;
+}
+
+	nav a:hover {
+		color: yellow !important;
+		text-decoration: none !important;
+	}
+
+tr:not(:first-child):hover {
+	background-color: darkgoldenrod;
+}
+
+table tr td {
+	border-color: gold !important;
+}
+
+
+table tr:nth-child(2) td {
+	border-top: #11bfbf !important;
+}

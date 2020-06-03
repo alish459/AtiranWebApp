@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebConnection.Services.CustomerService>
+@{
+	ViewBag.Title = "ليست مشتريان";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="table-responsive">
+	<table class="table table-dark">
+		<tbody class="sticky-top">
+			<tr>
+				<th>كد مشتري</th>
+				<th>نام مشتري</th>
+				<th width="110px">مانده</th>
+				<th width="80px">وضعيت</th>
+				<th>آدرس</th>
+				<th>تلفن</th>
+				<th>موبايل</th>
+				<th>#</th>
+				<th>#</th>
+				<th>#</th>
+			</tr>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>@item.CustomerCode</td>
+					<td>@item.CustomerName</td>
+					<td style="text-align:center">@item.AbsMan.ToString("#,0")</td>
+					<td>@item.Status</td>
+					<td>@item.Address</td>
+					<td>@item.Tell1</td>
+					<td>@item.Cell</td>
+					<td>
+						<a class="btn btn-info btn-block" href="/Home/CustomerDetails/@item.CustomerID">جزئيات</a>
+					</td>
+					<td>
+						<a class="btn btn-sm btn-warning">
+							<i class="glyphicon glyphicon-edit"></i>
+						</a>
+					</td>
+					<td>
+						<a class="btn btn-sm btn-danger">
+							<i class="glyphicon glyphicon-trash"></i>
+						</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+
+	</table>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c2d51c66c5c54f229281b41e2b5571e9" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="ZAhmadModel.cust_act" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZAhmadModel.custgroup" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZAhmadModel.CUSTOMERS" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="ZAhmadModel.FK_cust_act_CUSTOMERS" ManuallyRouted="false" />
+        <AssociationConnector Association="ZAhmadModel.FK_custgroup_custgroup" ManuallyRouted="false" />
+        <AssociationConnector Association="ZAhmadModel.FK_CUSTOMERS_custgroup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
